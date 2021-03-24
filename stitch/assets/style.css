@@ -41,11 +41,11 @@ li#theme-switcher { background:#fff; border:10px solid red; padding:20px; positi
 
 @font-face {
   font-family:'PlugNickel';
-  src: url('fonts/Plug-NickelBlack-webfont.eot');
-  src: url('fonts/Plug-NickelBlack-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/Plug-NickelBlack-webfont.woff') format('woff'),
-       url('fonts/Plug-NickelBlack-webfont.ttf') format('truetype'),
-       url('fonts/Plug-NickelBlack-webfont.svg#PlugNickel') format('svg');
+  src: url('../../assets/Plug-NickelBlack-webfont.eot');
+  src: url('../../assets/Plug-NickelBlack-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../assets/Plug-NickelBlack-webfont.woff') format('woff'),
+       url('../../assets/Plug-NickelBlack-webfont.ttf') format('truetype'),
+       url('../../assets/Plug-NickelBlack-webfont.svg#PlugNickel') format('svg');
   font-weight:normal;
   font-style:normal;
 }
@@ -54,7 +54,7 @@ li#theme-switcher { background:#fff; border:10px solid red; padding:20px; positi
 -------------------------------- */
 body {
 	color:#E1D3BF;
-	font:14px/1.6em Georgia, Times, "Times New Roman", serif;
+	font:15px/1.6em Georgia, Times, "Times New Roman", serif;
 	background-color:#000;
 	text-align:center;
 }
@@ -183,20 +183,13 @@ a:hover { text-decoration:underline; }
 			padding-left: 100px;
 		}
 
-		.content-area h1,
-		.content-area h2 {
-			color:#ffdf9d;
-			font:normal 28px/1em Georgia, Times, "Times New Roman", serif;
-			padding:0;
-			margin:0 0 20px;
-		}
-		.content-area h2 a,
-		#main .news-item h2 {
+		h2 {
 			color:#ffdf9d;
 			font-family: 'PlugNickel', serif;
-			font-size: 22px;
+			font-size:21px;
 			letter-spacing: 1px;
 			line-height: 1.35;
+			margin-bottom: 0.3em;
 		}
 			.content-area h1.super {
 				font:normal 10px/1em Arial, Helvetica, sans-serif;
@@ -296,20 +289,15 @@ a:hover { text-decoration:underline; }
 		margin:10px 0 25px;
 	}
 
-		/* Main content area: News
-		-------------------------------- */
+	.content-area .date {
+		font-style:italic;
+	}
 
-		.news .content-area h2 {
-			font-size:18px;
-			padding:20px 0 0;
-			margin:20px 0 5px;
-			border-top:1px solid #3f3621;
-		}
-		.news .content-area .date {
-			font-style:italic;
-			font-size:90%;
-			margin-top:0;
-		}
+	section {
+		margin: 20px 0;
+		padding: 0 0 20px;
+		border-bottom: 1px solid #3f3621;
+	}
 
 /* Game Promo Styles
 -------------------------------- */
@@ -339,6 +327,7 @@ a:hover { text-decoration:underline; }
 			bottom:0;
 		}
 	#game-promos li h4 {
+		color:#9b8257;
 		font-weight:bold;
 		margin-bottom:5px;
 	}
@@ -379,8 +368,25 @@ a:hover { text-decoration:underline; }
 	}
 
 .thumb-grid {
-	display: flex;
-	flex-flow: row wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.thumb-grid > a {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	padding-top: 70%;
+	height: 0;
+	width: 100%;
+}
+
+.thumb-grid > a img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 
 .thumb-grid div {

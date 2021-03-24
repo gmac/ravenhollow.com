@@ -1,0 +1,150 @@
+@font-face {
+  font-family:'PlugNickel';
+  src: url('../../assets/Plug-NickelBlack-webfont.eot');
+  src: url('../../assets/Plug-NickelBlack-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../assets/Plug-NickelBlack-webfont.woff') format('woff'),
+       url('../../assets/Plug-NickelBlack-webfont.ttf') format('truetype'),
+       url('../../assets/Plug-NickelBlack-webfont.svg#PlugNickel') format('svg');
+  font-weight:normal;
+  font-style:normal;
+}
+
+body {
+  background: black url(images/wmyt_bg.jpg) no-repeat center top;
+  background-size: contain;
+  color: whitesmoke;
+  font: 300 20px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0 15px;
+}
+
+#message {
+  height: 20px;
+}
+
+.message {
+  background-color: #990000;
+  border: 1px solid #6E0000;
+  border-radius: 5px;
+  box-sizing: border-box;
+  left: 5%;
+  padding: 6px 15px;
+  position: fixed;
+  top: -5px;
+  width: 90%;
+}
+
+.message p {
+  margin: 0;
+  padding: 0;
+}
+
+.message button {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px 0 50px;
+}
+
+.page header {
+  text-align: center;
+}
+
+.page h1,
+.page h2 {
+  color: #ffdf9d;
+  font-family: "PlugNickel", Arial, sans-serif;
+}
+
+.page h1 em {
+  display: block;
+  font-size: 0.6em;
+  font-style: normal;
+}
+
+.page p {
+  margin: 1em 0;
+}
+
+.page img.poster {
+  background-color: black;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  max-height: 700px;
+  max-width: 100%;
+  padding: 1px;
+}
+
+.page input,
+.page button {
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  font: 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.page input {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+.page button {
+  background: rgb(250,221,84); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(250,221,84,1) 0%, rgba(145,103,4,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,221,84,1)), color-stop(100%,rgba(145,103,4,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadd54', endColorstr='#916704',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+  cursor: pointer;
+  font-family: "PlugNickel", Arial, sans-serif;
+  text-decoration: none;
+  border: none;
+}
+
+.page button:hover {
+  background: none;
+  background-color: rgba(250,221,84,1);
+  color: black;
+}
+
+@media (min-width: 500px) {
+  .page input,
+  .page button {
+    float: left;
+  }
+
+  .page input {
+    margin-right: 2%;
+    width: 63%;
+  }
+
+  .page button {
+    width: 35%;
+  }
+}
+
+.note {
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+.crab {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
