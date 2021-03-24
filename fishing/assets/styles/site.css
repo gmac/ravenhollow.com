@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	color:#778473;
+	font:11px/1.4em Arial, Helvetica, sans-serif;
+	background:#191c1a url("../images/bg.gif") repeat-x;
+	text-align:center;
+	margin:0;
+}
+
+a { color:#ffb801; text-decoration:none; }
+a:hover { text-decoration:underline; }
+h2, h3 { color:#CCC; font-weight:normal; }
+
+/* TOP HAT
+* ------------------------------- */
+#tophat {
+	width:990px;
+	height:164px;
+	text-align:left;
+	background:#000 url("../images/tophat.jpg") no-repeat;
+	margin:0 auto;
+	position:relative;
+}
+	#tophat h1 {
+		padding:0;
+		margin:0;
+		position:absolute;
+		left:25px;
+		top:0;
+	}
+		#tophat h1 a {
+			display:block;
+			text-indent:-1000px;
+			overflow:hidden;
+			width:190px;
+			height:164px;
+		}
+
+	#tophat .ad {
+		width:728px;
+		height:90px;
+		background-color:#000;
+		position:absolute;
+		right:17px;
+		top:7px;
+	}
+
+	#tophat .addthis_button {
+		display:block;
+		background:none !important;
+		width:75px;
+		height:30px;
+		text-indent:-1000px;
+		overflow:hidden;
+		position:absolute;
+		left:907px;
+		top:117px;
+	}
+
+	#tophat #nav {
+		list-style:none;
+		position:absolute;
+		left:288px;
+		top:108px;
+		padding:0;
+		margin:0;
+	}
+		#tophat #nav li {
+			display:block;
+			float:left;
+			margin:0 33px;
+		}
+			#tophat #nav li.alpha {
+				margin-left:0;
+			}
+			#tophat #nav li.omega {
+				margin-right:0;
+			}
+			#tophat #nav li a {
+				background:url(../images/underline.gif) repeat-x 0 -3px;
+				font-size:10px;
+				text-indent:-1000px;
+				overflow:hidden;
+				display:block;
+				height:50px;
+			}
+				#tophat #nav li a:hover {
+					background-position:0 37px;
+				}
+				#tophat #nav li a.website {
+					width:165px;
+				}
+				#tophat #nav li a.about {
+					width:181px;
+				}
+				#tophat #nav li a.play {
+					width:99px;
+				}
+					#tophat #nav li a.play:hover {
+						background-position:0 -3px;
+					}
+	#tophat #size_options {
+		display:none;
+		width:130px;
+		list-style:none;
+		position:relative;
+		left:-14px;
+		top:-7px;
+		padding:0;
+		margin:0;
+		z-index:101;
+	}
+		#tophat #size_options li {
+			background-color:#5b6255;
+			border:1px solid #2a332d;
+			border-top:none;
+			padding:0;
+			margin:0;
+		}
+			#tophat #size_options li a {
+				display:block;
+				background:none;
+				color:#FFF;
+				width:125px;
+				height:28px;
+				line-height:28px;
+				font-size:12px;
+				text-indent:0;
+				text-align:center;
+			}
+
+/* GAME DISPLAY
+* ------------------------------- */
+#game {
+	background-color:#000;
+	border:1px solid #2a332d;
+	padding:1px;
+	margin:20px auto;
+}
+	.x1024 {
+		width:1024px;
+		height:768px;
+	}
+		.x1024 a {
+			display:block;
+			margin:84px 112px;
+		}
+	.x800 {
+		width:800px;
+		height:600px;
+	}
+
+/* PAGE
+* ------------------------------- */
+#page {
+	width:800px;
+	margin:40px auto;
+	text-align:left;
+	font-size:14px;
+	line-height:1.5em;
+}
+	#page h2 {
+		font-size:24px;
+		font-weight:normal;
+	}
+
+/* INDEX PAGE
+* ------------------------------- */
+#index_page {
+	width:800px;
+	height:600px;
+	text-indent:-5000px;
+	background:#000 url(../images/index.jpg) no-repeat 1px 1px;
+	border:1px solid #778473;
+	padding:1px;
+	margin:20px auto;
+	position:relative;
+}
+	#index_page ul,
+	#index_page ul li {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	a.button {
+		display:block;
+		position:absolute;
+		overflow:hidden;
+		text-indent:-1000px;
+		text-align:left;
+		background:url(../images/button.gif) no-repeat 8px 50px;
+		width:194px;
+		height:45px;
+	}
+		a.button:hover {
+			background-position:8px 8px;
+		}
+	#index_page a {
+		left:303px;
+	}
+		#index_page a.large {
+			top:232px;
+		}
+		#index_page a.small {
+			top:297px;
+		}
+
+/* FOOTER
+* ------------------------------- */
+#footer {
+	width:990px;
+	background:url("../images/footer.gif") no-repeat;
+	text-align:center;
+	padding:15px 0 0;
+	margin:0 auto;
+	clear:both;
+}
+	#footer h3 {
+		color:#d2d1cc;
+		font-weight:normal;
+		font-size:16px;
+		margin:0;
+	}
+	#footer cite {
+		font-style:normal;
+		text-transform:uppercase;
+	}
+	#footer p {
+		font-size:10px;
+		line-height:1.3em;
+	}
+		#footer p a {
+			color:#d2d1cc;
+			text-decoration:underline;
+		}
+	#footer ul {
+		font-size:13px;
+		list-style:none;
+		margin:25px 0 15px;
+	}
+		#footer ul li {
+			display:inline;
+			padding:0 15px;
+			border-left:1px solid #54443a;
+		}
+			#footer ul li.alpha {
+				border:none;
+				padding-left:0;
+			}
