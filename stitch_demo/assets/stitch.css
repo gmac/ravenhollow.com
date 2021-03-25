@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	color:#b3a58d;
+	background:#211f1b url("images/demo_bg.gif") repeat-x;
+}
+
+h2, h3 {
+  color:#e3d3b8;
+}
+
+#tophat {
+	background:#000 url("images/tophat.png") no-repeat;
+	height:164px;
+}
+
+#nav a {
+	color:#e3d3b8;
+}
+
+#footer {
+	background:url("images/footer.gif") no-repeat;
+}
+
+#game {
+	background-color:#000;
+	border:1px solid #54443a;
+	padding:1px;
+	margin:20px auto 0;
+	width:1024px;
+	height:768px;
+}

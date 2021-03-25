@@ -388,7 +388,6 @@ ul.lang .active a {
 /* FOOTER
 * ------------------------------- */
 #footer {
-  background:url("images/footer.png") no-repeat;
   clear:both;
   margin:0 auto 25px;
   min-height:165px;
