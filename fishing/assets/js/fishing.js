@@ -33,29 +33,29 @@ function FishingGame(domId){
 	/**
 	* Controller object for interfacing with the game's sound player.
 	*/
-	function sound(){
-		var _player;
+	function sound(soundfx){
+		var musicId;
 		return {
-			init:function(player){
-				_player = player;
-			},
 			startMusic:function(){
-				//_getPlayer().startMusic();
+				musicId = soundfx.play('music');
 			},
 			stopMusic:function(){
-				//_getPlayer().stopMusic();
+				if (musicId) {
+					soundfx.stop(musicId);
+					musicId = null;
+				}
 			},
 			goodCatch:function(){
-				//_getPlayer().catch();
+				soundfx.play('goodcatch');
 			},
 			badCatch:function(){
-				//_getPlayer().block();
+				soundfx.play('badcatch');
 			},
 			block:function(){
-				//_getPlayer().block();
+				soundfx.play('block');
 			},
 			timeout:function(){
-				//_getPlayer().timeout();
+				soundfx.play('timeout');
 			},
 		}
 	}
@@ -1025,6 +1025,16 @@ function FishingGame(domId){
 	*/
 	(function init() {
 		var self=this;
+		var soundfx = new Howl({
+	    src: ['assets/media/soundfx.mp3'],
+	    sprite: {
+	      goodcatch: [0, 1075],
+        badcatch: [1075, 525],
+        block: [1600, 1400],
+        timeout: [3000, 2200],
+        music: [5200, 34000],
+	    }
+	  });
 
 		// Main container
 		var dom = $('#'+domId);
@@ -1033,7 +1043,20 @@ function FishingGame(domId){
 		_net = net(dom);
 		_game = game(dom);
 		_score = $('<div/>').addClass('fishing-game-score').appendTo(dom);
-		_sound = sound();
+		_sound = sound(soundfx);
+
+		var readyStatus = {graphics: false, sound:false};
+		var onReady = function(status) {
+			if (status.graphics && status.sound) {
+				_game.launch();
+				_intro.show();
+			}
+		};
+
+  	soundfx.once('load', function(){
+  		readyStatus.sound = true;
+  		onReady(readyStatus);
+  	});
 
 		// _sprites sheet image
 		_sprites = $('<img/>')
@@ -1041,8 +1064,8 @@ function FishingGame(domId){
 			.hide()
 			.appendTo(dom)
 			.imagesLoaded(function(){
-				_game.launch();
-				_intro.show();
+				readyStatus.graphics = true;
+				onReady(readyStatus);
 			})
 			.get(0);
 	})();

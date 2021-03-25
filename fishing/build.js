@@ -7,6 +7,7 @@ const divider = '<!--CONTENT-->';
 const pages = {
   'index': 'Home',
   'about': 'About',
+  'credits': 'Credits',
 };
 
 Object.entries(pages).forEach(([slug, title]) => {
