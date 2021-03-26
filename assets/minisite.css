@@ -250,140 +250,32 @@ ul.lang .active a {
   width:25%;
 }
 
-/* Download links */
-#page #download-wmyt {
-  background-color:rgba(0,0,0,0.75);
-  display:none;
-  height:100%;
-  left:0;
-  position:absolute;
-  text-shadow:0 0 10px rgba(0,0,0,1);
-  -moz-text-shadow:0 0 10px rgba(0,0,0,1);
-  -webkit-text-shadow:0 0 10px rgba(0,0,0,1);
-  top:0;
-  width:100%;
+.thumb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
-#page #download-wmyt div {
-  padding:25px;
+.thumb-grid a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding-top: 65%;
+  height: 0;
+  width: 100%;
 }
-#page #download-wmyt .close {
-  border:1px solid #666;
-  color:#666;
-  cursor:pointer;
-  display:block;
-  font:12px/15px Arial,sans-serif;
-  height:15px;
-  position:absolute;
-  right:10px;
-  text-align:center;
-  top:10px;
-  width:15px;
+.thumb-grid a img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
-#page #download-wmyt .close:hover {
-  border:1px solid #ccc;
-  color:#ccc;
-}
-#page #download-wmyt p {
-  color:#666;
-  margin:0;
-}
-#page #download-wmyt p.header {
-  color:#999;
-  font:20px/1.75em "PlugNickel",Arial,sans-serif;
-}
-#page #download-wmyt p.subhead {
-  color:#999;
-  font:14px/1.3em Arial,sans-serif;
-  margin-bottom:10px;
-}
-#page #download-wmyt p a {
-  font-size:16px;
-  line-height:1.4em;
-  text-decoration:none;
-}
-#page #download-wmyt p a:hover {
-  text-decoration:underline;
-}
-
-/* Promo List */
-#page ul.promos {
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-#page ul.promos li {
-  float:left;
-  padding-left:29px;
-  position:relative;
-  width:214px;
-}
-#page ul.promos li:first-child {
-  padding:0;
-}
-#page ul.promos a.promo {
-  display:block;
-  text-decoration:none;
-}
-#page ul.promos a.promo:hover img {
-  border:1px solid #666;
-}
-#page ul.promos a.promo:hover h3 {
-  color:#fff;
-}
-#page ul.promos img {
-  background-color:#000;
-  border:1px solid #333;
-  display:block;
-  padding:1px;
-}
-#page ul.promos h3 {
-  font-size:16px;
-  margin:10px 0 15px;
-}
-#page ul.promos p {
-  font-size:12px;
-}
-#page ul.promos ul {
-  list-style:outside disc none;
-  margin:10px 0 0;
-  padding-left:15px;
-}
-#page ul.promos ul li {
-  padding:0;
-}
-
-
-/* Gallery List */
-#page ul.gallery {
-  list-style:none;
-  padding:0;
-  width:710px;
-}
-#page ul.gallery li {
-  float:left;
-  padding:0 10px 10px 0;
-}
-#page ul.gallery a {
-  border:1px solid #333;
-  display:block;
-  height:128px;
-  padding:1px;
-  width:128px;
-}
-#page ul.gallery a img {
-  opacity:0.5;
-  transition: opacity 0.25s;
-  -moz-transition: opacity 0.25s;
-  -webkit-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-}
-#page ul.gallery a:hover img {
-  opacity:1;
-  transition: opacity 0.25s;
-  -moz-transition: opacity 0.25s;
-  -webkit-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-}
+  .thumb-grid a.center {
+    background-color:white;
+  }
+  .thumb-grid a.center img {
+    top:50%;
+    transform: translateY(-50%);
+  }
 
 /* FOOTER
 * ------------------------------- */

@@ -1,13 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const header = fs.readFileSync(path.join(__dirname, 'wrapper/header.html'), 'utf8');
-const footer = fs.readFileSync(path.join(__dirname, 'wrapper/footer.html'), 'utf8');
+const header = fs.readFileSync(path.join(__dirname, '_header.html'), 'utf8');
+const footer = fs.readFileSync(path.join(__dirname, '_footer.html'), 'utf8');
 const divider = '<!--CONTENT-->';
 
 const pages = {
   'index': 'Home',
   'about': 'About',
-  'media': 'Media',
+  'credits': 'Credits',
+  'guide': 'Guide',
+  'galleries': 'Galleries',
 };
 
 Object.entries(pages).forEach(([slug, title]) => {
