@@ -27,7 +27,7 @@ h3 {
   font-size:18px;
   font-weight:normal;
   letter-spacing:2px;
-  margin:50px 0 20px;
+  margin:20px 0;
 }
 
 @font-face {
@@ -130,46 +130,25 @@ html[xmlns] .clearfix {
 
 /* GAME DISPLAY
 * ------------------------------- */
-#game {
+#landing {
+  text-align: center;
+  margin:20px auto 40px;
+  width: 990px;
+}
+#landing img {
   background-color:#000;
   border:1px solid #333;
-  height:675px;
-  margin:0 auto 100px;
-  outline:none;
   padding:1px;
-  width:900px;
+  width:400px;
 }
-
-ul.lang {
-  height: 25px;
-  line-height: 25px;
-  list-style: none;
-  margin: 25px auto;
-  padding: 0;
-  text-align: right;
-  width: 900px;
+#landing ul {
+  list-style:none;
+  margin:0;
+  padding:0;
 }
-ul.lang li {
-  border-left: 1px solid #444;
-  margin-left: 5px;
-  padding-left: 8px;
-  display: inline;
-}
-ul.lang li:first-child {
-  border: none;
-}
-ul.lang a,
-ul.lang .active a:hover {
-  color: #999;
-  font-size: 11px;
-  text-decoration: none;
-}
-ul.lang a:hover {
-  text-decoration: underline;
-}
-ul.lang .active a {
-  cursor: default;
-  font-weight: bold;
+#landing .divider {
+  margin:0 5px;
+  opacity:0.5;
 }
 
 /* PAGE
@@ -179,75 +158,69 @@ ul.lang .active a {
   margin:75px auto 100px;
   text-align:left;
 }
-#page p {
+p {
   margin:15px 0;
 }
-#page img.border {
+img.border {
   border:1px solid #333;
   padding:1px;
 }
-#page img.left {
+img.left {
   float:left;
   margin-right:25px;
 }
-#page img.right {
+img.right {
   float:right;
   margin-left:25px;
 }
 
-#page ul.controls {
+ul.controls {
   border-top:1px dotted #333;
   padding-left:15px;
 }
-#page ul.controls li {
+ul.controls li {
   margin:30px 0;
 }
-#page ul.controls li span {
+ul.controls li span {
   font-family:"PlugNickel",Arial,sans-serif;
   font-size:18px;
   font-weight:normal;
   letter-spacing:2px;
 }
 
-#page .footnote {
-  color:#555;
-  font-size:12px;
-  margin:50px 0 0;
-}
-#page .footnote span {
-  font-size:15px;
-  position:relative;
-  top:0.25em;
-}
-
 /* Credits List */
-#page ul.credits {
+ul.credits {
   list-style:none;
+  margin-bottom:50px;
   padding:0;
 }
-#page ul.credits li {
+ul.credits li {
   border-bottom:1px dotted #333;
   height:35px;
   line-height:35px;
   position:relative;
 }
-#page ul.credits cite {
+ul.credits cite {
   font-style:italic;
   position:absolute;
   right:0;
 }
 
 /* Credits Table */
-#page ul.table {
+ul.table {
   list-style:none;
+  margin-bottom:50px;
   padding:0;
   width:100%;
 }
-#page ul.table li {
+ul.table li {
   float:left;
   height:30px;
   line-height:30px;
   width:25%;
+}
+ul.table-33 li {
+  width:33%;
 }
 
 .thumb-grid {
@@ -275,6 +248,22 @@ ul.lang .active a {
   .thumb-grid a.center img {
     top:50%;
     transform: translateY(-50%);
+  }
+
+.about {
+  display: grid;
+  grid-template-columns:215px auto;
+  grid-gap: 0 20px;
+  margin-bottom: 15px;
+}
+  .about h3 {
+    grid-column: 1 / 3;
+  }
+  .about img {
+    width: 100%;
+  }
+  .about p {
+    margin-top: 0;
   }
 
 /* FOOTER
