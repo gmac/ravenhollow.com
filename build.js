@@ -5,9 +5,23 @@ const footer = fs.readFileSync(path.join(__dirname, '_footer.html'), 'utf8');
 const divider = '<!--CONTENT-->';
 
 const pages = {
+  // stitch: {
+  //   'index': 'Home',
+  //   'about': 'About',
+  //   'credits': 'Credits',
+  //   'guide': 'Guide',
+  //   'galleries': 'Galleries',
+  // },
+  // wmyt: {
+  //   'index': 'Home',
+  //   'about': 'About',
+  //   'credits': 'Credits',
+  //   'guide': 'Guide',
+  //   'concepts': 'Concepts',
+  // },
   'index': 'Home',
   'about': 'About',
-  'media': 'Media',
+  'gallery': 'Gallery',
   'download': 'Download',
 };
 

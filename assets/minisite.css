@@ -1,5 +1,14 @@
 @charset "UTF-8";
-/* CSS Document */
+@font-face {
+  font-family:'PlugNickel';
+  src: url('Plug-NickelBlack-webfont.eot');
+  src: url('Plug-NickelBlack-webfont.eot?#iefix') format('embedded-opentype'),
+       url('Plug-NickelBlack-webfont.woff') format('woff'),
+       url('Plug-NickelBlack-webfont.ttf') format('truetype'),
+       url('Plug-NickelBlack-webfont.svg#PlugNickel') format('svg');
+  font-weight:normal;
+  font-style:normal;
+}
 
 body {
   color:#999;
@@ -28,17 +37,6 @@ h3 {
   font-weight:normal;
   letter-spacing:2px;
   margin:20px 0;
-}
-
-@font-face {
-  font-family:'PlugNickel';
-  src: url('Plug-NickelBlack-webfont.eot');
-  src: url('Plug-NickelBlack-webfont.eot?#iefix') format('embedded-opentype'),
-       url('Plug-NickelBlack-webfont.woff') format('woff'),
-       url('Plug-NickelBlack-webfont.ttf') format('truetype'),
-       url('Plug-NickelBlack-webfont.svg#PlugNickel') format('svg');
-  font-weight:normal;
-  font-style:normal;
 }
 
 .clearfix:after {
