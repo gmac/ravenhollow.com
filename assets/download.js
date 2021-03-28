@@ -1,16 +1,16 @@
 (function() {
   const s3BaseUrl = ['http', 's://', 'wmyt-series', '.s3.', 'amazonaws', '.com'].join('');
   const fileNames = {
-    stitchWin: 'sheep_f32.zip',
-    stitchMac: 'sheep_f32.zip',
-    wmytWin: 'sheep_f32.zip',
-    wmytMac: 'sheep_f32.zip',
+    stitchWin: 'stitch_windows.zip',
+    stitchMac: 'stitch_macos.zip',
+    wmytWin: 'wmyt_windows.zip',
+    wmytMac: 'wmyt_macos.zip',
   };
   const fileDesc = {
-    stitchWin: '<em>A Stitch in Time</em> for Windows',
-    stitchMac: '<em>A Stitch in Time</em> for Mac OS',
-    wmytWin: '<em>What Makes You Tick</em> for Windows',
-    wmytMac: '<em>What Makes You Tick</em> for Mac OS',
+    stitchWin: 'Download <strong>"A Stitch in Time"</strong> for Windows',
+    stitchMac: 'Download <strong>"A Stitch in Time"</strong> for Mac OS',
+    wmytWin: 'Download <strong>"What Makes You Tick"</strong> for Windows',
+    wmytMac: 'Download <strong>"What Makes You Tick"</strong> for Mac OS',
   };
 
   const overlay = document.createElement('div');
@@ -27,9 +27,6 @@
 
   const dialog = document.createElement('div');
   dialog.className = 'modal-dialog';
-  dialog.style.backgroundColor = 'white';
-  dialog.style.padding = '20px';
-  dialog.style.width = '400px';
   overlay.appendChild(dialog);
 
   function saveS3File(fileref) {
@@ -61,7 +58,7 @@
       }
     };
     const onClose = function(evt) {
-      if (evt.target === overlay) {
+      if (evt.target === overlay || /close/.test(evt.target.className)) {
         evt.preventDefault();
         close();
       }
@@ -69,9 +66,10 @@
 
     dialog.innerHTML = [
       `<h1>${fileDesc[fileref]}</h1>`,
-      `<p>Please verify that you're human: <strong>what is ${first} + ${second}?</strong></p>`,
-      '<form><input id="captcha" placeholder="answer"/> <button>Download</button></form>',
-      `<p>Having trouble? Download from <a href="${el.getAttribute('href')}">Mediafire</a>.`
+      `<p>Please confirm you're human: <strong class="prompt">what is ${first} + ${second}?</strong></p>`,
+      '<form><input id="captcha" placeholder="answer"/> <button type="submit">Download</button></form>',
+      `<p>Having trouble? Download from <a href="${el.getAttribute('href')}">Mediafire</a>.`,
+      '<a class="close" href="#">×</a>'
     ].join('');
 
     document.body.appendChild(overlay);

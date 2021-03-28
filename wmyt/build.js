@@ -9,7 +9,7 @@ const pages = {
   'about': 'About',
   'credits': 'Credits',
   'guide': 'Guide',
-  'concepts': 'Concepts',
+  'concept-art': 'Concept Art',
 };
 
 Object.entries(pages).forEach(([slug, title]) => {

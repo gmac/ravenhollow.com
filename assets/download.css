@@ -1,0 +1,72 @@
+.modal-dialog {
+  background-color: #f4ede5;
+  border-radius: 5px;
+  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 15px 20px;
+  position: relative;
+  width: 400px;
+}
+.modal-dialog a {
+  color: #ae7d00;
+}
+.modal-dialog h1 {
+  color: #42382f;
+  font: 18px/1.5 'PlugNickel', sans-serif;
+  letter-spacing: 0.075rem;
+}
+.modal-dialog h1 strong {
+  display: block;
+  font-size: 1.3em;
+}
+.modal-dialog .prompt {
+  font-size: 1.2em;
+}
+.modal-dialog input,
+.modal-dialog button {
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  font: 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 40px;
+  line-height: 38px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.modal-dialog input {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+.modal-dialog button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgb(120,103,86);
+  background: linear-gradient(180deg, rgba(120,103,86,1) 0%, rgba(66,56,47,1) 100%);
+  color: #fff;
+  cursor: pointer;
+  font-family: "PlugNickel", Arial, sans-serif;
+  text-decoration: none;
+}
+.modal-dialog button:hover {
+  background: rgb(156,132,104);
+  background: linear-gradient(180deg, rgba(156,132,104,1) 0%, rgba(66,56,47,1) 100%);
+}
+.modal-dialog input,
+.modal-dialog button {
+  float: left;
+}
+.modal-dialog input {
+  margin-right: 2%;
+  width: 63%;
+}
+.modal-dialog button {
+  width: 35%;
+}
+.modal-dialog .close {
+  color: #42382f;
+  font-size: 1.75em;
+  line-height: 1;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}

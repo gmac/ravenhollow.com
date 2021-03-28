@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'download.css';
 @font-face {
   font-family:'PlugNickel';
   src: url('Plug-NickelBlack-webfont.eot');
@@ -17,7 +18,7 @@ body {
   text-align:center;
   margin:0;
 }
-a { color:#ba9a52; }
+a { color:#ffb801; }
 object,
 embed {
   outline:none;
@@ -263,6 +264,10 @@ ul.table-33 li {
   .about p {
     margin-top: 0;
   }
+
+.hint em {
+  opacity: 0.65;
+}
 
 /* FOOTER
 * ------------------------------- */

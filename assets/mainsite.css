@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import 'download.css';
 @font-face {
   font-family:'PlugNickel';
   src: url('Plug-NickelBlack-webfont.eot');
@@ -32,7 +34,7 @@ body {
 }
 
 iframe { border: none; }
-a { color:#998359; text-decoration:none; }
+a { color:#ffb801; text-decoration:none; }
 a:hover { text-decoration:underline; }
 
 /* Header Structures
@@ -266,7 +268,7 @@ a:hover { text-decoration:underline; }
 .games-menu h3 {
 	border-bottom:1px solid #9b8257;
 	color:#c4a774;
-	font-family:'PlugNickel', serif;
+	font: 15px 'PlugNickel', sans-serif;
 	height:19px;
 	margin:0 0 20px;
 	padding:0 0 .5em;
@@ -382,62 +384,6 @@ a[data-download] + a[data-download] {
   border-left: 1px solid #555;
   padding-left: 15px;
   margin-left: 10px;
-}
-
-.download input,
-.download button {
-  border-radius: 5px;
-  box-sizing: border-box;
-  display: block;
-  font: 16px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.download input {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 1em;
-}
-
-.download button {
-  background: rgb(250,221,84); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(250,221,84,1) 0%, rgba(145,103,4,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,221,84,1)), color-stop(100%,rgba(145,103,4,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(250,221,84,1) 0%,rgba(145,103,4,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fadd54', endColorstr='#916704',GradientType=0 ); /* IE6-9 */
-  color: #fff;
-  cursor: pointer;
-  font-family: "PlugNickel", Arial, sans-serif;
-  text-decoration: none;
-  border: none;
-}
-
-.download button:hover {
-  background: none;
-  background-color: rgba(250,221,84,1);
-  color: black;
-}
-
-@media (min-width: 500px) {
-  .download input,
-  .download button {
-    float: left;
-  }
-
-  .download input {
-    margin-right: 2%;
-    width: 63%;
-  }
-
-  .download button {
-    width: 35%;
-  }
 }
 
 .download .note {
