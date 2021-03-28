@@ -68,7 +68,7 @@
       `<h1>${fileDesc[fileref]}</h1>`,
       `<p>Please confirm you're human: <strong class="prompt">what is ${first} + ${second}?</strong></p>`,
       '<form><input id="captcha" placeholder="answer"/> <button type="submit">Download</button></form>',
-      `<p>Having trouble? Download from <a href="${el.getAttribute('href')}">Mediafire</a>.`,
+      `<p>Having trouble? Download from <a href="${el.getAttribute('href')}">MEGA</a>.`,
       '<a class="close" href="#">×</a>'
     ].join('');
 
