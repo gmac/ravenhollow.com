@@ -23,11 +23,13 @@ h2, h3 {
 	background:url("images/footer.gif") no-repeat;
 }
 
-#game {
-	background-color:#000;
-	border:1px solid #54443a;
-	padding:1px;
-	margin:20px auto 0;
-	width:1024px;
-	height:768px;
+.hints {
+  margin: 20px 0 40px;
 }
+  .hints h4,
+  .hints p {
+  	margin: 0 0 0.5em;
+  }
+  .hints h4 {
+    font-size: 1.1em;
+  }

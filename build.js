@@ -1,43 +1,52 @@
 const fs = require('fs');
 const path = require('path');
-const header = fs.readFileSync(path.join(__dirname, '_header.html'), 'utf8');
-const footer = fs.readFileSync(path.join(__dirname, '_footer.html'), 'utf8');
 const divider = '<!--CONTENT-->';
-
 const pages = {
-  // stitch: {
-  //   'index': 'Home',
-  //   'about': 'About',
-  //   'credits': 'Credits',
-  //   'guide': 'Guide',
-  //   'galleries': 'Galleries',
-  // },
-  // wmyt: {
-  //   'index': 'Home',
-  //   'about': 'About',
-  //   'credits': 'Credits',
-  //   'guide': 'Guide',
-  //   'concepts': 'Concepts',
-  // },
-  'index': 'Home',
-  'about': 'About',
-  'gallery': 'Gallery',
-  'download': 'Download',
+  './stitch': {
+    'index': 'Download',
+    'about': 'About',
+    'guide': 'Guide',
+    'concept-art': 'Concept Art',
+    'credits': 'Credits',
+  },
+  './wmyt': {
+    'index': 'Download',
+    'about': 'About',
+    'guide': 'Guide',
+    'concept-art': 'Concept Art',
+    'credits': 'Credits',
+  },
+  './fishing': {
+    'index': 'Play!',
+    'about': 'About',
+    'credits': 'Credits',
+  },
+  './': {
+    'index': 'News',
+    'about': 'About',
+    'gallery': 'Gallery',
+    'download': 'Download',
+  }
 };
 
-Object.entries(pages).forEach(([slug, title]) => {
-  const file = fs.readFileSync(path.join(__dirname, slug+'.html'), 'utf8');
-  const parts = file.split(divider);
+Object.entries(pages).forEach(([dir, files]) => {
+  const header = fs.readFileSync(path.join(__dirname, dir, '_header.html'), 'utf8');
+  const footer = fs.readFileSync(path.join(__dirname, dir, '_footer.html'), 'utf8');
 
-  if (parts.length !== 3) {
-    throw new Error(`document #{slug} is missing content sections`);
-  }
+  Object.entries(files).forEach(([slug, title]) => {
+    const file = fs.readFileSync(path.join(__dirname, dir, slug+'.html'), 'utf8');
+    const parts = file.split(divider);
 
-  const contentHeader = header
-    .replace(/\{title\}/g, title);
+    if (parts.length !== 3) {
+      throw new Error(`document #{slug} is missing content sections`);
+    }
 
-  const content = [contentHeader.trim(), divider, parts[1].trim(), divider, footer].join('\n\n\n');
-  fs.writeFileSync(path.join(__dirname, slug+'.html'), content, { encoding: 'utf8' });
+    const contentHeader = header
+      .replace(/\{title\}/g, title);
+
+    const content = [contentHeader.trim(), divider, parts[1].trim(), divider, footer].join('\n\n\n');
+    fs.writeFileSync(path.join(__dirname, dir, slug+'.html'), content, { encoding: 'utf8' });
+  });
 });
 
 console.log('done.');
