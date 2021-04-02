@@ -67,10 +67,12 @@ a:hover { text-decoration:underline; }
 
 	/* MAIN NAV */
 	#main-nav {
-		height:37px;
-		list-style:none;
 		background:url("images/nav.gif") no-repeat;
-		padding:0 0 0 199px;
+		display: flex;
+		height:37px;
+		justify-content: center;
+		list-style:none;
+		padding:0;
 		margin:0;
 	}
 		#main-nav li {
@@ -323,7 +325,7 @@ a:hover { text-decoration:underline; }
 			padding-left:10px;
 			margin-left:10px;
 		}
-			#footer ul li.alpha {
+			#footer ul li:first-child {
 				border:none;
 				padding:0;
 				margin:0;

@@ -7,6 +7,17 @@
   <link rel="image_src" href="assets/images/stitch_badge.jpg">
   <link rel="stylesheet" href="assets/mainsite.css" type="text/css" media="screen">
   <link rel="canonical" title="What Makes You Tick: A Stitch in Time" href="http://lassiegames.com/stitch">
+  <script>
+    const DL = 'dlenabled';
+    if (location.search === '?download') {
+      window[DL] = true;
+      localStorage.setItem(DL, 'y');
+    } else if (location.search === '?reset') {
+      localStorage.removeItem(DL);
+    } else if (localStorage.getItem(DL) === 'y') {
+      window[DL] = true;
+    }
+  </script>
 </head>
 <body class="page page-id-4 page-template page-template-default news">
    <div id="page">
@@ -14,10 +25,10 @@
          <h1 id="logo"><a href="index.html">What Makes You Tick: A Stitch in Time</a></h1>
       </div>
       <ul id="main-nav">
-         <li class="alpha"><a href="index.html">News</a></li>
+         <li><a href="index.html">News</a></li>
          <li><a href="about.html">About</a></li>
          <li><a href="gallery.html">Gallery</a></li>
-         <li class="omega"><a href="download.html">Download</a></li>
+         <script>if (window[DL]) { document.write('<li><a href="download.html">Download</a></li>') }</script>
       </ul>
       <div class="shadow">
         <div id="body">
@@ -77,7 +88,7 @@
       </div>
       <div id="footer">
          <ul>
-            <li class="alpha"><a href="index.html">News</a></li>
+            <li><a href="index.html">News</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="download.html">Download</a></li>
