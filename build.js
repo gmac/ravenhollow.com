@@ -25,6 +25,7 @@ const pages = {
     'index': 'News',
     'about': 'About',
     'gallery': 'Gallery',
+    'preview': 'Preview',
     'download': 'Download',
   }
 };
