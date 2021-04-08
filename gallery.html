@@ -7,17 +7,6 @@
   <link rel="image_src" href="assets/images/stitch_badge.jpg">
   <link rel="stylesheet" href="assets/mainsite.css" type="text/css" media="screen">
   <link rel="canonical" title="What Makes You Tick: A Stitch in Time" href="http://lassiegames.com/stitch">
-  <script>
-    const DL = 'dlenabled';
-    if (location.search === '?download') {
-      window[DL] = true;
-      localStorage.setItem(DL, 'y');
-    } else if (location.search === '?reset') {
-      localStorage.removeItem(DL);
-    } else if (localStorage.getItem(DL) === 'y') {
-      window[DL] = true;
-    }
-  </script>
 </head>
 <body class="page page-id-4 page-template page-template-default news">
    <div id="page">
@@ -25,10 +14,10 @@
          <h1 id="logo"><a href="index.html">What Makes You Tick: A Stitch in Time</a></h1>
       </div>
       <ul id="main-nav">
-         <li><a href="index.html">News</a></li>
-         <li><a href="about.html">About</a></li>
-         <li><a href="gallery.html">Gallery</a></li>
-         <script>if (window[DL]) { document.write('<li><a href="download.html">Download</a></li>') }</script>
+        <li><a href="index.html">News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="with-downloads"><a href="download.html">Download</a></li>
       </ul>
       <div class="shadow">
         <div id="body">
@@ -44,24 +33,34 @@
 <h1>Gallery</h1>
 
 <div class="thumb-grid">
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch1.jpg"><img src="assets/media/screenshots/stitch1.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch2.jpg"><img src="assets/media/screenshots/stitch2.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch3.jpg"><img src="assets/media/screenshots/stitch3.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch4.jpg"><img src="assets/media/screenshots/stitch4.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch5.jpg"><img src="assets/media/screenshots/stitch5.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch6.jpg"><img src="assets/media/screenshots/stitch6.jpg"></a>
-  <!--a data-fslightbox="screenshots" href="assets/media/screenshots/stitch7.jpg"><img src="assets/media/screenshots/stitch7.jpg"></a-->
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch8.jpg"><img src="assets/media/screenshots/stitch8.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch9.jpg"><img src="assets/media/screenshots/stitch9.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch10.jpg"><img src="assets/media/screenshots/stitch10.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch11.jpg"><img src="assets/media/screenshots/stitch11.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch12.jpg"><img src="assets/media/screenshots/stitch12.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch13.jpg"><img src="assets/media/screenshots/stitch13.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch14.jpg"><img src="assets/media/screenshots/stitch14.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch15.jpg"><img src="assets/media/screenshots/stitch15.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch16.jpg"><img src="assets/media/screenshots/stitch16.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch17.jpg"><img src="assets/media/screenshots/stitch17.jpg"></a>
-  <a data-fslightbox="screenshots" href="assets/media/screenshots/stitch18.jpg"><img src="assets/media/screenshots/stitch18.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/intro.jpg"><img src="assets/media/gallery/intro.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/docks1.jpg"><img src="assets/media/gallery/docks1.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/boathouse.jpg"><img src="assets/media/gallery/boathouse.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/inventory.jpg"><img src="assets/media/gallery/inventory.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/harbor1.jpg"><img src="assets/media/gallery/harbor1.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/harbor2.jpg"><img src="assets/media/gallery/harbor2.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/portauthority.jpg"><img src="assets/media/gallery/portauthority.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/fishing.jpg"><img src="assets/media/gallery/fishing.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/inn1.jpg"><img src="assets/media/gallery/inn1.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/square.jpg"><img src="assets/media/gallery/square.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/yard.jpg"><img src="assets/media/gallery/yard.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/notebook.jpg"><img src="assets/media/gallery/notebook.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/mask1.jpg"><img src="assets/media/gallery/mask1.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/mask2.jpg"><img src="assets/media/gallery/mask2.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/antique.jpg"><img src="assets/media/gallery/antique.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/treehouse.jpg"><img src="assets/media/gallery/treehouse.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/world.jpg"><img src="assets/media/gallery/world.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/cliff.jpg"><img src="assets/media/gallery/cliff.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/campfire.jpg"><img src="assets/media/gallery/campfire.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/cellar.jpg"><img src="assets/media/gallery/cellar.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/baron.jpg"><img src="assets/media/gallery/baron.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/tower.jpg"><img src="assets/media/gallery/tower.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/inn2.jpg"><img src="assets/media/gallery/inn2.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/river.jpg"><img src="assets/media/gallery/river.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/swamp.jpg"><img src="assets/media/gallery/swamp.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/mtstation.jpg"><img src="assets/media/gallery/mtstation.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/mtcatwalks.jpg"><img src="assets/media/gallery/mtcatwalks.jpg"></a>
+  <a data-fslightbox="gallery" href="assets/media/gallery/mtlab.jpg"><img src="assets/media/gallery/mtlab.jpg"></a>
 </div>
 
 
@@ -87,15 +86,16 @@
         </div>
       </div>
       <div id="footer">
-         <ul>
-            <li><a href="index.html">News</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="download.html">Download</a></li>
-         </ul>
-         <p>Copyright © 2010-2021 Lassie Games</p>
+        <ul>
+          <li><a href="index.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="with-downloads"><a href="download.html">Download</a></li>
+        </ul>
+        <p>Copyright © 2010-2021 Lassie Games</p>
       </div>
       <script src="assets/fslightbox.js"></script>
+      <script src="assets/download.js"></script>
    </div>
 </body>
 </html>

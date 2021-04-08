@@ -1,0 +1,15 @@
+{
+  "name": "ravenhollow.com",
+  "version": "1.0.0",
+  "main": "build.js",
+  "repository": "git@github.com:gmac/ravenhollow.com.git",
+  "author": "Greg MacWilliam <gmacwill77@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server -c-1",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

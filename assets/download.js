@@ -83,4 +83,24 @@
       open(el, evt);
     });
   });
-}());
+})();
+
+(function() {
+  const settingName = 'withDownloads';
+  let downloadsEnabled = false;
+
+  if (location.search === '?download') {
+    downloadsEnabled = true;
+    localStorage.setItem(settingName, 'y');
+  } else if (location.search === '?reset') {
+    localStorage.removeItem(settingName);
+  } else if (localStorage.getItem(settingName) === 'y') {
+    downloadsEnabled = true;
+  }
+
+  if (downloadsEnabled) {
+    Array.from(document.querySelectorAll('.with-downloads')).forEach(function(el) {
+      el.classList.remove('with-downloads');
+    });
+  }
+})();

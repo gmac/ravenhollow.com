@@ -51,6 +51,11 @@ h3 {
 .clearfix {
   display: inline-block;
 }
+
+.with-downloads {
+  display: none !important;
+}
+
 html[xmlns] .clearfix {
   display: block;
 }

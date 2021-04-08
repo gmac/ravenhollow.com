@@ -7,17 +7,6 @@
   <link rel="image_src" href="assets/images/stitch_badge.jpg">
   <link rel="stylesheet" href="assets/mainsite.css" type="text/css" media="screen">
   <link rel="canonical" title="What Makes You Tick: A Stitch in Time" href="http://lassiegames.com/stitch">
-  <script>
-    const DL = 'dlenabled';
-    if (location.search === '?download') {
-      window[DL] = true;
-      localStorage.setItem(DL, 'y');
-    } else if (location.search === '?reset') {
-      localStorage.removeItem(DL);
-    } else if (localStorage.getItem(DL) === 'y') {
-      window[DL] = true;
-    }
-  </script>
 </head>
 <body class="page page-id-4 page-template page-template-default news">
    <div id="page">
@@ -25,10 +14,10 @@
          <h1 id="logo"><a href="index.html">What Makes You Tick: A Stitch in Time</a></h1>
       </div>
       <ul id="main-nav">
-         <li><a href="index.html">News</a></li>
-         <li><a href="about.html">About</a></li>
-         <li><a href="gallery.html">Gallery</a></li>
-         <script>if (window[DL]) { document.write('<li><a href="download.html">Download</a></li>') }</script>
+        <li><a href="index.html">News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="with-downloads"><a href="download.html">Download</a></li>
       </ul>
       <div class="shadow">
         <div id="body">
@@ -41,14 +30,14 @@
 <!--CONTENT-->
 
 
-<section>
+<section class="with-downloads">
   <a id="banner" href="download.html">Download the<br>Full Talkie Series</a>
 </section>
 <section>
    <h2>Check 1, 2... is this thing on?</h2>
-   <p class="date">March 31st, 2021</p>
-   <p>We're back! After a hiatus in which our game executables fell to the obsolescence of time and we lost our website domain, we've rallied to restore the legacy of the <em>Tick</em> games. What's new? Lots of good stuff: new game executables that will run on modern systems; a reconstruction of the old websites; and an HTML5 port of the fishing game that will run natively within modern browsers.</p>
-   <p>We're thrilled to have the games updated and running on modern systems, and are pleased to again offer these updated versions as free downloads. As for us: Matt is working as a freelance writer doing some work on games, and Greg is coding international payments at <a href="https://www.shopify.com/">Shopify</a>.</p>
+   <p class="date">April 9th, 2021</p>
+   <p>We're back! After a hiatus in which our game executables fell to the obsolescence of time and we lost our website domain, we've rallied to restore the legacy of the <em>Tick</em> games. We've reconstructed the old websites and now have an HTML5 port of the fishing game that will run natively in modern browsers.</p>
+   <p>As for us: Matt now works as a freelance writer (sometimes still writing games), and Greg is a fulltime dad and software engineer at <a href="https://www.shopify.com/">Shopify</a>.</p>
 </section>
 <section>
    <h2>Pillars of the Earth preview</h2>
@@ -147,15 +136,16 @@
         </div>
       </div>
       <div id="footer">
-         <ul>
-            <li><a href="index.html">News</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="download.html">Download</a></li>
-         </ul>
-         <p>Copyright © 2010-2021 Lassie Games</p>
+        <ul>
+          <li><a href="index.html">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="with-downloads"><a href="download.html">Download</a></li>
+        </ul>
+        <p>Copyright © 2010-2021 Lassie Games</p>
       </div>
       <script src="assets/fslightbox.js"></script>
+      <script src="assets/download.js"></script>
    </div>
 </body>
 </html>
