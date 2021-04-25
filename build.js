@@ -25,8 +25,10 @@ const pages = {
     'index': 'News',
     'about': 'About',
     'gallery': 'Gallery',
-    'preview': 'Preview',
+    'nodownload': 'Download',
     'download': 'Download',
+    'credits': 'Credits',
+    'guide': 'Guide',
   }
 };
 
