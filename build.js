@@ -26,9 +26,7 @@ const pages = {
     'about': 'About',
     'gallery': 'Gallery',
     'nodownload': 'Download',
-    'download': 'Download',
-    'credits': 'Credits',
-    'guide': 'Guide',
+    'download': 'Downloads',
   }
 };
 
