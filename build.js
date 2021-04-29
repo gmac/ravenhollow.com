@@ -2,21 +2,21 @@ const fs = require('fs');
 const path = require('path');
 const divider = '<!--CONTENT-->';
 const pages = {
-  './stitch': {
+  './games/stitch': {
     'index': 'Download',
     'about': 'About',
     'guide': 'Guide',
     'concept-art': 'Concept Art',
     'credits': 'Credits',
   },
-  './wmyt': {
+  './games/wmyt': {
     'index': 'Download',
     'about': 'About',
     'guide': 'Guide',
     'concept-art': 'Concept Art',
     'credits': 'Credits',
   },
-  './fishing': {
+  './games/fishing': {
     'index': 'Play!',
     'about': 'About',
     'credits': 'Credits',
@@ -25,8 +25,8 @@ const pages = {
     'index': 'News',
     'about': 'About',
     'gallery': 'Gallery',
-    'nodownload': 'Download',
     'download': 'Downloads',
+    'download2': 'Downloads',
   }
 };
 

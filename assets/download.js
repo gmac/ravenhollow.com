@@ -84,27 +84,3 @@
     });
   });
 })();
-
-(function() {
-  const settingName = 'withDownloads';
-  let downloadsEnabled = false;
-
-  if (/\?downloads?/.test(location.search)) {
-    downloadsEnabled = true;
-    localStorage.setItem(settingName, 'y');
-  } else if (location.search === '?reset') {
-    localStorage.removeItem(settingName);
-  } else if (localStorage.getItem(settingName) === 'y') {
-    downloadsEnabled = true;
-  }
-
-  if (downloadsEnabled) {
-    Array.from(document.querySelectorAll('.with-downloads')).forEach(function(el) {
-      el.classList.remove('with-downloads');
-    });
-
-    var div = document.createElement('div');
-    div.innerHTML = '<style>.sans-downloads { display:none !important; }</style>';
-    document.body.appendChild(div.firstChild);
-  }
-})();
