@@ -36,10 +36,6 @@ iframe { border: none; }
 a { color:#ffb801; text-decoration:none; }
 a:hover { text-decoration:underline; }
 
-.with-downloads {
-	display: none !important;
-}
-
 /* Header Structures
 -------------------------------- */
 #page {
