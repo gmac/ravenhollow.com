@@ -26,7 +26,6 @@ const pages = {
     'about': 'About',
     'gallery': 'Gallery',
     'download': 'Downloads',
-    'download2': 'Downloads',
   }
 };
 
